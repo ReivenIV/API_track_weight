@@ -12,8 +12,7 @@ const router = express.Router();
 router.post("/register/v1", async (req, res, next) => {
   try {
     let checkAllUsers = await authModel.getByEmailOrUsername(req.body);
-    console.log(checkAllUsers);
-    console.log(checkAllUsers);
+
     if (checkAllUsers.length > 0) {
       return res.status(401).json({ msg: "email or username already stored in DB" });
     }

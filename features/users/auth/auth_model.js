@@ -34,7 +34,7 @@ class authModel {
     return response;
   }
 
-  async authenticateUser(data) {
+ async authenticateUser(data) {
     let existingUser = await userModel.getByEmailOrUsername(data);
     let token = jwt.sign({ userId: existingUser[0].id }, process.env.JWT_SECRET);
 
@@ -42,4 +42,7 @@ class authModel {
   }
 }
 
-export default authModel;
+// Create an instance of authModel
+const authModelInstance = new authModel(); 
+
+export default authModelInstance;
