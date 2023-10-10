@@ -1,0 +1,3 @@
+###
+GET http://localhost:8080/tools/test/db_connection
+Content-Type: application/json
