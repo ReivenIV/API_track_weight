@@ -2,7 +2,11 @@ import express from "express";
 import fileUpload from "express-fileupload";
 import dotenv from "dotenv";
 
-//import endpoints
+// Global middlewares
+import errorHandler from "./middlewares/errorHandler.js";
+import requestHandler from "./tools/requests_api/request_handler.js";
+
+// import endpoints
 import userEndpoints from "./features/users/user_router.js";
 import toolsEndpoints from "./tools/tools_router.js";
 
@@ -15,6 +19,10 @@ app.use(
     createParentPath: true,
   }),
 );
+
+app.use(errorHandler)
+app.use(requestHandler)
+
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());

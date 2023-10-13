@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "/home/heaven/Desktop/my_codes/API_track_weight/logs/.9e566a207d416f70184b5b5a968661b35c5ab26f-audit.json",
+    "files": [
+        {
+            "date": 1697209637288,
+            "name": "/home/heaven/Desktop/my_codes/API_track_weight/logs/reqinfo-2023-10-13.log",
+            "hash": "5bee0b720617bf98b0f9897e308c2c243edf8dc325dc29ef9ace24e10bb84485"
+        }
+    ],
+    "hashType": "sha256"
+}

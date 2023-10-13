@@ -16,6 +16,7 @@ router.post("/register/v1", async (req, res, next) => {
     if (checkAllUsers.length > 0) {
       return res.status(401).json({ msg: "email or username already stored in DB" });
     }
+
     const resgiterResponse = await authModel.registerUser(req.body);
     let token = await authModel.authenticateUser(req.body);
 

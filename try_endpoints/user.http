@@ -4,25 +4,14 @@
 
 
 ###
-POST http://localhost:8080/users/auth/simple_test/v1
-Content-Type: application/json
-
-{
-    "username":"Jordan",
-    "password":"123",
-    "role":"client",
-    "email":"Jordan@endpoint.com"
-}
-
-###
 POST http://localhost:8080/users/auth/register/v1
 Content-Type: application/json
 
 {
-    "username":"Jordan",
+    "username":"JordaNostrum12",
     "password":"123",
     "role":"client",
-    "email":"Jordan@endpoint.com"
+    "email":"JordaNostrum12@endpoint.com"
 }
 
 ###
